@@ -25,7 +25,6 @@ export default function AssentosPage(){
         <>
         <p>Selecione o(s) assento(s)</p>
        <Assentos assentos={assentos} setAssentos={setAssentos} /> 
-        <button >imprimir</button>
         </>
     )
 }

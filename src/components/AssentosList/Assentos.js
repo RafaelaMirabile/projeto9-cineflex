@@ -1,23 +1,24 @@
 import React from "react";
-import { AssentosContainer, Seat,Seats,SeatsOPtions,Option, UserInfos} from "./style"
+import { AssentosContainer, Seat,Seats,SeatsOPtions,Option} from "./style"
+import UserInfos from "../FormsList/Forms";
+
+
 
 export default function Assentos(props){
     
     const {assentos, setAssentos}=props;
     const [selectedSeats, setselectedSeats]= React.useState([]);
 
-    
 
-
-    function updateSeats(id,disponivel,name,){
+    function updateSeats(id,disponivel,name){
        
         if (disponivel === false ){
             alert("Esse assento não está disponível");
         }else{
-            const jaexiste = selectedSeats.find((value) => value.id === id); // aqui tira;
+            const jaexiste = selectedSeats.find((value) => value.id === id); // true ou false;
            if(jaexiste){
             const assentoSelecionado = assentos.find((value)=> value.id === id);
-                assentoSelecionado.isSelected = false; // crio um atributo;
+            assentoSelecionado.isSelected = false; // crio um atributo;
             const novo = selectedSeats.filter((value)=> value.id !== jaexiste.id); 
                 setselectedSeats(novo);
             } else{
@@ -28,10 +29,7 @@ export default function Assentos(props){
         }
     }
 
-
-
-
-
+    console.log(selectedSeats);
 
     return(
         <AssentosContainer>
@@ -53,10 +51,7 @@ export default function Assentos(props){
                         <Option>Indisponível</Option>
                     </Seat>
                 </SeatsOPtions>
-                <UserInfos>
-                    kkkkkkkk
-                </UserInfos>
-
+                <UserInfos selectedSeats={selectedSeats}/>
         </AssentosContainer>
     )    
     

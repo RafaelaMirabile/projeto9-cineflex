@@ -48,11 +48,7 @@ line-height: 15px;
 letter-spacing: -0.013em;
 color: #4E5A65;
 margin-top: 40px;
+`
 
-`
-export const UserInfos=styled.div`
-border : 2px solid red;
-margin-top: 70px;
-`
 
 

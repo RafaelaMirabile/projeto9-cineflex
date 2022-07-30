@@ -1,4 +1,6 @@
-export default function Sucesso(){
+export default function Sucesso({state}){
+
+    console.log(state);
     return(
         <>
         ROTA SUCESSO
