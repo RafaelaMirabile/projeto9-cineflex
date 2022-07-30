@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cabecalho from "./components/common/Cabecalho";
-import Menu from "./components/Pages/MoviesPage";
+import Menu from "./components/MovieList/MoviesPage";
 import Sessoes from "./components/Pages/SessoesPage";
 import Assentos from "./components/Pages/AssentosPage"
 import Sucesso from "./components/Pages/SucessoPage"

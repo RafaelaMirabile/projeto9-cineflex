@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
-import Banner from '../Banner';
+import Banner from "../MovieList/Banner"
+
 
 
 export default function Menu(){

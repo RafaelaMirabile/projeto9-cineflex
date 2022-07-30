@@ -22,7 +22,7 @@ export default function Sessoes(){
         <>
         <p>Selecione o horário</p>
             <Horarios horarios={horarios}/>
-            <Footer  filmeId={filmeId}/>
+            <Footer filmeId={filmeId}/>
         </>
     )
 }
