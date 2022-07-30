@@ -1,18 +1,42 @@
 import React from "react";
 import { AssentosContainer, Seat,Seats,SeatsOPtions,Option, UserInfos} from "./style"
 
-
-
 export default function Assentos(props){
-    const {assentos, updateSeats}=props;
+    
+    const {assentos, setAssentos}=props;
+    const [selectedSeats, setselectedSeats]= React.useState([]);
+
+    
 
 
-    const newSeats = assentos.map(seat => ({ ...seat, "isSelected": false }));
+    function updateSeats(id,disponivel,name,){
+       
+        if (disponivel === false ){
+            alert("Esse assento não está disponível");
+        }else{
+            const jaexiste = selectedSeats.find((value) => value.id === id); // aqui tira;
+           if(jaexiste){
+            const assentoSelecionado = assentos.find((value)=> value.id === id);
+                assentoSelecionado.isSelected = false; // crio um atributo;
+            const novo = selectedSeats.filter((value)=> value.id !== jaexiste.id); 
+                setselectedSeats(novo);
+            } else{
+                setselectedSeats([...selectedSeats,{id:id, isSelected: true, name:name}]);
+                const assentoSelecionado = assentos.find((value)=> value.id === id);
+                assentoSelecionado.isSelected = true; // crio um atributo;
+            }
+        }
+    }
+
+
+
+
+
 
     return(
         <AssentosContainer>
                 <Seats >
-                    {newSeats.map((seat) => 
+                    {assentos.map((seat) => 
                     <Seat isAvailable={seat.isAvailable} isSelected={seat.isSelected} onClick={() => updateSeats(seat.id,seat.isAvailable,seat.name)} key={seat.id}>
                         {seat.name}
                     </Seat>
@@ -34,8 +58,11 @@ export default function Assentos(props){
                 </UserInfos>
 
         </AssentosContainer>
-    )
+    )    
+    
+}   
 
 
 
-}
+
+

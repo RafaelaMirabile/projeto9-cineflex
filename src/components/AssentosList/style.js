@@ -9,8 +9,6 @@ justify-content: center;
 align-items: center;
 flex-direction : column;
 
-
-
 `
 export const Seats=styled.div`
 border : 2px solid purple;
