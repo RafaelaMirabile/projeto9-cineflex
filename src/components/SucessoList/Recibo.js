@@ -3,12 +3,7 @@ import { MainContainer,Heading, Column, Info,Button} from "./style";
 
 export default function Recibo(props){
    const{dataUser}=props;
-    console.log(dataUser);
-    console.log(dataUser.Username);
-
     const seats =[...dataUser.selectedSeats];
-    console.log(seats[0].name);
-
 
     return(
         <MainContainer>
@@ -40,5 +35,3 @@ export default function Recibo(props){
     </MainContainer>
     )
 }
-
-//{info.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")}

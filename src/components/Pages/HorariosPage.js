@@ -17,8 +17,6 @@ export default function HorariosPage(){
             setHorarios(response.data.days);
         })
     },[])
-        console.log(filmeId);
-        console.log(horarios);
     return(
         <>
         <p>Selecione o horário</p>

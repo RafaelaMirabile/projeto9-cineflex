@@ -5,14 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function UserForms(props){
     const{selectedSeats, movie, weekday,session, dateNumber}= props;
-    console.log(selectedSeats);
-
-
-    const seats = selectedSeats.map(value =>(value.id));
-    console.log(seats);
     
     const navigate = useNavigate();
-
+    const seats = selectedSeats.map(value =>(value.id));
+    
     const[Usernome, setNome] = useState("");
     const[UserCPF, setCPF]= useState("");
 
@@ -27,10 +23,8 @@ export default function UserForms(props){
     }
 
     function buySeats(e){
-        
-        e.preventDefault();
+         e.preventDefault();
 
-        
         const requisicao = axios.post('https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many',{
             ids :seats,    
             name:Usernome,

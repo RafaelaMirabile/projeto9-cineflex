@@ -3,9 +3,6 @@ import { Rodape, Container, Poster, Info} from "./style"
 
 export default function AssentosRodape(props){
     const {movie, weekday, session }=props;
-
-    console.log(session);
-
     return(
         <Rodape>
             <Container>

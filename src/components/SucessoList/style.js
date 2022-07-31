@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
-
 export const MainContainer = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 68px 24px;
 `
-
 export const Heading = styled.h2 `
 
     padding: 30px 0 50px;

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.div`
-border : 2px solid red;
 margin-top: 60px;
 width: 325px;
 margin-bottom: 10px;

@@ -2,24 +2,19 @@ import styled from "styled-components";
 
 export const AssentosContainer=styled.div`
 margin-top: 30px;
-border : 2px solid green;
 width :100%;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction : column;
-
 `
 export const Seats=styled.div`
-border : 2px solid purple;
 width: 325px;
 flex-wrap: wrap;
 display: flex;
 justify-content: center;
 align-items: center;
-
 `
-
 export const Seat =styled.div`
 background: ${props => props.isSelected ? "#8DD7CF" : props.isAvailable ? "#C3CFD9" : "#FBE192"};
 border-radius: 12px;
@@ -34,7 +29,6 @@ margin-bottom: 6px
 
 `
 export const SeatsOPtions=styled.div`
-border: 3px solid pink;
 width: 325px;
 display: flex;
 justify-content: space-around;
@@ -56,7 +50,6 @@ export const Rodape=styled.div`
     background-color: #DFE6ED;
 `
 export const Banner=styled.div`
-border : 2px solid yellow;
 
 h2{
 font-family: 'Roboto';
@@ -87,7 +80,6 @@ export const Info = styled.div`
         font-size: 26px;
         line-height: 30px;
         color: #293845;
-        border : 2px solid green;
         margin-left: 6px
     }
 `
@@ -99,7 +91,6 @@ export const Poster = styled.div`
     width: 64px;
     height: 89px;
     background-color: #FFFFFF;
-
     img{
         width: 48px;
         height: 72px;
