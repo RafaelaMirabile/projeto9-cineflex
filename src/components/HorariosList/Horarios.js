@@ -2,8 +2,9 @@ import { MainContainer , Sessao, Button,Day, Buttons } from "./style"
 import { Link } from "react-router-dom";
 
 export default function Horarios(props){
-const {horarios} =props;
+const {horarios, filme} =props;
 console.log(horarios);
+console.log(filme);
 
     return(
 
@@ -19,7 +20,7 @@ console.log(horarios);
                       )}
                     </Buttons>
                   </Sessao>
-                )};  
+                )} 
             </MainContainer>
     )
 }

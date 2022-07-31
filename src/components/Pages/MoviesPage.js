@@ -5,11 +5,11 @@ import Banner from "../MovieList/Banner"
 
 
 
-export default function Menu(){
+export default function MoviesPage(){
     const[filmes, setFilmes]= React.useState([]);
     
     useEffect(()=>{
-        const promise = axios.get("https://mock-api.driven.com.br/api/v5/cineflex/movies");
+        const promise = axios.get("https://mock-api.driven.com.br/api/v7/cineflex/movies");
         promise.then((response) => setFilmes(response.data))},[])
 
     return(
@@ -23,7 +23,6 @@ export default function Menu(){
                 )}
             </div>
         </>
-
     )
 }
 

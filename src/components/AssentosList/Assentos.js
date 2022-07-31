@@ -1,13 +1,13 @@
 import React from "react";
 import { AssentosContainer, Seat,Seats,SeatsOPtions,Option} from "./style"
-import UserInfos from "../FormsList/Forms";
-
-
+import UserForms from "../UserFormsList/UserForms";
+import AssentosRodape from "./AssentosRodape";
 
 export default function Assentos(props){
     
-    const {assentos, setAssentos}=props;
+    const {assentos, setAssentos,movie,weekday,session, dateNumber}=props;
     const [selectedSeats, setselectedSeats]= React.useState([]);
+
 
 
     function updateSeats(id,disponivel,name){
@@ -29,8 +29,6 @@ export default function Assentos(props){
         }
     }
 
-    console.log(selectedSeats);
-
     return(
         <AssentosContainer>
                 <Seats >
@@ -41,7 +39,7 @@ export default function Assentos(props){
                     )}
                 </Seats>
                 <SeatsOPtions>
-                    <Seat style={{ background: '#8DD7CF'}}>
+                    <Seat isSelected style={{ background: '#8DD7CF'}} >
                         <Option>Selecionado</Option>
                     </Seat>
                     <Seat isAvailable ={true}>
@@ -51,7 +49,8 @@ export default function Assentos(props){
                         <Option>Indisponível</Option>
                     </Seat>
                 </SeatsOPtions>
-                <UserInfos selectedSeats={selectedSeats}/>
+                <UserForms selectedSeats={selectedSeats} movie={movie} weekday={weekday} session={session}  dateNumber={dateNumber}/>
+                <AssentosRodape movie={movie} weekday={weekday} session={session}/>
         </AssentosContainer>
     )    
     

@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Horarios from "../HorariosList/Horarios";
 import Footer from "../FooterList/Footer";
 
-export default function Sessoes(){
+export default function HorariosPage(){
 
     const{idFilme}= useParams();
     const[filmeId, setFilmeId]= React.useState({});
@@ -18,10 +18,11 @@ export default function Sessoes(){
         })
     },[])
         console.log(filmeId);
+        console.log(horarios);
     return(
         <>
         <p>Selecione o horário</p>
-            <Horarios horarios={horarios}/>
+            <Horarios horarios={horarios} filme={filmeId}/>
             <Footer filmeId={filmeId}/>
         </>
     )

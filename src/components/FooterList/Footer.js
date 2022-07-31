@@ -1,7 +1,6 @@
 import { FooterContainer , Title, Poster, MovieName} from "./style";
 
-
-export default function Footer (props){
+export default function Footer(props){
     const{filmeId} =props;
 
     console.log(filmeId);
@@ -13,7 +12,6 @@ export default function Footer (props){
           <MovieName>{filmeId.title}</MovieName> 
         </Title>
     </FooterContainer>
-
     );
 
 }
