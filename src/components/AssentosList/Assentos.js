@@ -8,8 +8,6 @@ export default function Assentos(props){
     const {assentos, setAssentos,movie,weekday,session, dateNumber}=props;
     const [selectedSeats, setselectedSeats]= React.useState([]);
 
-
-
     function updateSeats(id,disponivel,name){
        
         if (disponivel === false ){
@@ -52,8 +50,7 @@ export default function Assentos(props){
                 <UserForms selectedSeats={selectedSeats} movie={movie} weekday={weekday} session={session}  dateNumber={dateNumber}/>
                 <AssentosRodape movie={movie} weekday={weekday} session={session}/>
         </AssentosContainer>
-    )    
-    
+    )       
 }   
 
 

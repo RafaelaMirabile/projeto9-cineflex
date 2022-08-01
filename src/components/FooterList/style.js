@@ -3,6 +3,9 @@ import styled from "styled-components"
 export const FooterContainer = styled.div`
 width: 100%;
 background: #DFE6ED;
+position: fixed;
+bottom: 0;
+left: 0;
 `
 export const Title = styled.div`
 display :flex;
@@ -14,7 +17,6 @@ img{
     width: 48px;
     height: 72px;
 }
-
 `
 export const Poster = styled.div`
 background: #FFFFFF;

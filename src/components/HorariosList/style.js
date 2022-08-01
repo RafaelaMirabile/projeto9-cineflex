@@ -8,6 +8,7 @@ align-items: center;
 justify-content: center;
 width : 100%;
 padding: 30px;
+margin-bottom: 80px;
 `
 export const Sessao =styled.div`
 display : flex;

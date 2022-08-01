@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AssentosContainer=styled.div`
-margin-top: 30px;
+margin-top: 40px;
 width :100%;
 display: flex;
 justify-content: center;
@@ -25,8 +25,7 @@ align-items: center;
 width: 26px;
 height: 26px;
 margin-left :6px;
-margin-bottom: 6px
-
+margin-bottom: 12px
 `
 export const SeatsOPtions=styled.div`
 width: 325px;
