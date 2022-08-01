@@ -1,8 +1,10 @@
+import { BannerContainer } from "./style"
+
 export default function Banner ({filmesBanner}){
     
     return(
-            <div className='banner'>
+            <BannerContainer>
                 <img src ={filmesBanner}/>
-            </div>
+            </BannerContainer>
     )
 }

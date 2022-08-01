@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.div`
-margin-top: 60px;
+margin-top: 20px;
 width: 325px;
 margin-bottom: 10px;
 
@@ -23,7 +23,7 @@ form > div:nth-child(3) {
 `
 
 export const Info=styled.div`
-margin-bottom: 24px;
+margin-bottom: 20px;
 
 input{
 width: 318px;

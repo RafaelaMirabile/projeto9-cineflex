@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AssentosContainer=styled.div`
-margin-top: 40px;
+margin-top: 30px;
 width :100%;
 display: flex;
 justify-content: center;
@@ -31,6 +31,7 @@ export const SeatsOPtions=styled.div`
 width: 325px;
 display: flex;
 justify-content: space-around;
+margin-top: 10px;
 `
 export const Option = styled.p`
 font-family: 'Roboto';
@@ -44,9 +45,12 @@ margin-top: 40px;
 `
 export const Rodape=styled.div`
     display: flex;
-    min-height: 118px;
+    min-height: 110px;
     width: 100%;
     background-color: #DFE6ED;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 `
 export const Banner=styled.div`
 
